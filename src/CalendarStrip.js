@@ -328,7 +328,7 @@ class CalendarStrip extends Component {
       // Scroll to selected date, centered in the week
       const scrolledDate = moment(mDate);
       scrolledDate.subtract(Math.floor(this.props.numDaysInWeek / 2), "days");
-      this.scroller.scrollToDate(scrolledDate);
+      this?.scroller?.scrollToDate(scrolledDate);
     }
   }
 
