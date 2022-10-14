@@ -284,7 +284,7 @@ class CalendarStrip extends Component {
   // updateWeekView allows external callers to update the visible week.
   updateWeekView = date => {
     if (this.props.scrollable) {
-      this.scroller.scrollToDate(date);
+      this?.scroller?.scrollToDate(date);
       return;
     }
 
