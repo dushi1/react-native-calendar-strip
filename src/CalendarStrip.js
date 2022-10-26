@@ -296,7 +296,7 @@ class CalendarStrip extends Component {
   }
 
   //Handling press on date/selecting date
-  onDateSelected = selectedDate => {
+  onDateSelected = (selectedDate,throughButton = false) => {
     let newState;
     if (this.props.scrollable) {
       newState = { selectedDate };
@@ -309,7 +309,7 @@ class CalendarStrip extends Component {
     }
     this.setState(() => newState);
     const _selectedDate = selectedDate && selectedDate.clone();
-    this.props.onDateSelected && this.props.onDateSelected(_selectedDate);
+    this.props.onDateSelected && this.props.onDateSelected(_selectedDate, throughButton);
   }
 
   // Get the currently selected date (Moment JS object)
